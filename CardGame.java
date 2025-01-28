@@ -66,7 +66,7 @@ public class CardGame {
 		}
 
 		if(isPrime){
-			System.out.printlm(" The summation is a prime number!");
+			System.out.println(" The summation is a prime number!");
 		} else {
 			System.out.println(" The summation is not a prime number.");
 		}
