@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CardGame {
-
+	
 	private static ArrayList<Card> deckOfCards = new ArrayList<Card>();
 	private static ArrayList<Card> playerCards = new ArrayList<Card>();
 
