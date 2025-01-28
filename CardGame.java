@@ -56,6 +56,21 @@ public class CardGame {
 		}
 		System.out.println("Sum of card values: " + sum);
 
+		//check if the sum is a prime number 
+		boolean isPrime = true;
+		for (int i = 2; i <= Math.sqrt(sum); i++) {
+			if (sum % i == 0){
+				isPrime = false;
+				break;
+			}
+		}
+
+		if(isPrime){
+			System.out.printlm(" The summation is a prime number!");
+		} else {
+			System.out.println(" The summation is not a prime number.");
+		}
+
 	}//end main
 
 	public static void shuffle() {
