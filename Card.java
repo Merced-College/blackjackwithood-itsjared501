@@ -1,47 +1,57 @@
 public class Card {
-    private String suit;
-    private String rank;
-    private int value;
-    private String pic;
+    
+    //data variables
+    //heart, ace, 11,ah.gif
+    private String cardSuit;
+    private String cardRank;
+    private int cardValue;
+    private String picName;
 
+    //constructor
     public Card() {
-        suit = "";
-        rank = "";
-        value = 0;
-        pic = "";
+        cardSuit = "hearts";
+        cardRank = "ace";
+        cardValue = 1;
+        picName = "kd.gif";
     }
 
-    public Card(String suit, String rank, int value, String pic) {
-        this.suit = suit;
-        this.rank = rank;
-        this.value = value;
-        this.pic = pic;
+    public Card(String suit, String rank, int value, String picName) {
+        cardSuit = suit;
+        cardRank = rank; 
+        cardValue = value; 
+        this.picName = picName; 
     }
 
-    //setters and getters
+    //setters and getters (4 of each)
     public void setSuit(String suit) {
-        this.suit = suit;
+        this.cardSuit = suit;
     }
-
     public void setRank(String rank) {
-        this.rank = rank;
+        this.cardRank = rank;
     }
-
     public void setValue(int value) {
-        this.value = value;
+        this.cardValue = value;
+    }
+    public void setPicName(String picName) {
+        this.picName = picName;
     }
 
-    public void setPic(int pic) {
-        this.pic = pic;
-    }
-
+    //getters
     public String getSuit() {
-        return suit;
+        return cardSuit;
+    }
+    public String getRank() {
+        return cardRank;
+    }
+    public int getValue() {
+        return cardValue;
+    }
+    public String getPicName() {
+        return picName;
     }
 
     public String toString() {
-        return "suit " + suit + "rank " + rank + "value " + value + "pic " + pic;
+        return "Suit: " + cardSuit + " Rank: " + cardRank + " Value: " + cardValue + " Picture Name: " + picName;
     }
-
 
 }

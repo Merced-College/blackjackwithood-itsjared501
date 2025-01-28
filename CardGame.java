@@ -1,3 +1,7 @@
+////Angel Grajeda-Cervantes
+//Andreas Hitt
+//Jared Lee
+//1/28/25
 //package cardGame;
 
 import java.io.File;
@@ -6,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CardGame {
-	
+
 	private static ArrayList<Card> deckOfCards = new ArrayList<Card>();
 	private static ArrayList<Card> playerCards = new ArrayList<Card>();
 
@@ -25,8 +29,7 @@ public class CardGame {
 		while(input.hasNext()) {
 			String[] fields  = input.nextLine().split(",");
 			//	public Card(String cardSuit, String cardName, int cardValue, String cardPicture) {
-			Card newCard = new Card(fields[0], fields[1].trim(),
-					Integer.parseInt(fields[2].trim()), fields[3]);
+			Card newCard = new Card(fields[0], fields[1].trim(), Integer.parseInt(fields[2].trim()), fields[3]);
 			deckOfCards.add(newCard);	
 		}
 
@@ -45,6 +48,13 @@ public class CardGame {
 			System.out.println(c);
 
 		System.out.println("pairs is " + checkFor2Kind());
+
+		//sum all of the values in the player's deck 
+		int sum = 0;
+		for(int i= 0; i < playerCards.size(); i++) { 
+			sum += playerCards.get(i).getValue();
+		}
+		System.out.println("Sum of card values: " + sum);
 
 	}//end main
 
